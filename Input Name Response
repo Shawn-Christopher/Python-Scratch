@@ -1,0 +1,10 @@
+## Answers you back when you input your name
+
+def greetings_function(greet, name):
+    print(greet + " "+ name +"!")
+
+answer_name = input("Hi, what's your name?") 
+if answer_name: ## any value in answer_name
+    greetings_function("Have a nice day", answer_name) ## function kicks in
+else: 
+    print("") 
