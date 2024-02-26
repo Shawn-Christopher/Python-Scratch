@@ -1,0 +1,22 @@
+def calculator(num1, num2, operator): ##Encapsulated by an IF-statement
+    if operator == '+':
+        return num1 + num2
+    elif operator == '-':
+        return num1 - num2
+    elif operator == '*':
+        return num1 * num2
+    elif operator == '/':
+        if num2 != 0:
+            return num1 / num2
+        else:
+            return "Error: Division by zero is not allowed"
+    else:
+        return "Error: Invalid operator"
+
+## Variables written here:
+num1 = int(input("Enter first number: ")) 
+operator = str(input("Enter your operator: "))
+num2 = int(input("Enter last number: "))
+
+## Result shown
+print("Total: " + str(calculator(num1, num2, operator)))
