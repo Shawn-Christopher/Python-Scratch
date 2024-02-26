@@ -1,0 +1,8 @@
+def AddCal(num1, num2):
+    total = num1 + num2
+    return total
+
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter last number: "))
+
+print("Total: " + str(AddCal(num1, num2)))
