@@ -1,1 +1,38 @@
+name = "Cony"
+age = 25
+favorite_color = "Purple"
+favorite_movie = "The Chosen"
+mobile_number = "0033595"
+motto_in_life = "Generosity is pure"
+
+question_1 = input("Hello, what's your name? ")
+
+if question_1 == name:
+    age_input = input(f"Hi, {name}! What about your age? ")
+    if age_input == str(age):
+        color_input = input(f"Wow! you are {age} but looking young. How about your favorite color? ")
+        if color_input == favorite_color:
+            movie_input = input(f"A {favorite_color} fan huh? That's nice. How about your favorite movie?")
+            if movie_input == favorite_movie:
+                mnum_input = input(f"{favorite_movie} is a great choice! How about your phone number?")
+                if mnum_input == mobile_number:
+                    motto_input = input(f"{mobile_number} I got it. It's a secret, I promise. Last one, what's your motto in life?")
+                    if motto_input == motto_in_life:
+                        summary_input = input(f"It's nice knowing you, {name}. Would you like me to give you a summary of yourself?")
+                        if summary_input == str("yes"):
+                            print(f"{name}, {age}, {favorite_color}, {favorite_movie}, {mobile_number}, {motto_in_life}. Thank you for providing me your information.")
+                        else:
+                            print(f"Alright. Thank you so much for your time, {name}.")
+                    else:
+                        print(f"I don't understand why you have such thinking, {name}.")
+                else:
+                    print(f"I don't recognize that number.")
+            else:
+                print(f"{movie_input} is interesting too!")
+        else:
+            print(f"I don't know what color is that.")
+    else:
+        print("Sorry, I don't recognize that age.")
+else:
+    print("Sorry, I don't recognize that name.")
 
