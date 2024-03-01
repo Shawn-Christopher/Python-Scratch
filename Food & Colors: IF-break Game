@@ -1,0 +1,13 @@
+colors = ["purple", "red", "orange", "yellow"] # data container
+user_input = input(r"What is your favorite color?") # user input (this becomes the oop variable)
+food = ["chicken", "fish", "beef"] # data container
+for color in colors: # Added the for iterative loop because it's fun. lol! but you can just remove this.
+    if user_input in colors:
+        print(f"{user_input} is a nice choice!")
+        break # this is intended, to make sure the result won't repeat more than once
+    elif user_input in food:
+        print(f"Come on! {user_input} is a food, not a color.")
+        break
+    else:
+        print(f"I don't know what {user_input} is. Apologies!")
+        break
