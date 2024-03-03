@@ -1,0 +1,8 @@
+people = ["doctor", "teacher", "neighbor"] ## data sample
+adjectives = ["friendly", "kind", "smart"]
+
+for occupation in people: # initial for loop
+    for adj in adjectives: # nested "for loop", a loop inside a loop
+        print(adj, occupation)
+
+# result was similar to a concatenated/appended text
