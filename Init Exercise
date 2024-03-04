@@ -1,0 +1,25 @@
+class Guest:
+    def __init__(self, first, last, interest, phone):
+        self.first = first
+        self.last = last
+        self.interst = interest
+        self.phone = phone
+
+g_1 = Guest("Eve", "Dela Cruz", "Anime", 12345)
+g_2 = Guest("Adam", "Perez", "Russian literature", 87654)
+g_3 = Guest("Mike", "Lim", "Movies", 59821)
+g_4 = Guest("Katie", "Lopez", "Sports", 81901)
+g_5 = Guest("Bert", "Smith", "Cooking", 19027)
+
+# or use a dictionary:
+"""guests = {
+    "Eve": Guest("Eve", "Dela Cruz", "Anime", 12345),
+    "Adam": Guest("Adam", "Perez", "Russian literature", 87654),
+    "Mike": Guest("Mike", "Lim", "Movies", 59821),
+    "Katie": Guest("Katie", "Lopez", "Sports", 81901),
+    "Bert": Guest("Bert", "Smith", "Cooking", 19027)
+}"""
+
+print(g_1.first, g_5.last)
+
+# or: print(guests["Eve"].first, guests["Bert"].last)
