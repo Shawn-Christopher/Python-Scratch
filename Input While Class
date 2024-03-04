@@ -1,0 +1,33 @@
+class Customers: 
+    def __init__(self, name, beverage, food, total):
+        self.name = name
+        self.beverage = beverage
+        self.food = food
+        self.total = total
+        self.greetings = f"Welcome to Coffee Palace, {name}!" ## I didn't made a class variable
+    
+    # made a dictionary instead of the typical one.
+customer_list = {
+    "Nate": Customers("Nate", "Espresso", "Pastrami on Rye", 220),
+    "Elaine": Customers("Elaine", "Strawberry Frappuccino", "Tuna Wrap", 270),
+    "Samirah": Customers("Samirah", "Iced Caffe Latte", "Cinnamon Roll", 225),
+    "Jerry": Customers("Jerry", "Caramel Macchiato", "Glazed Doughnut", 230),
+    "Paz": Customers("Paz", "Iced Tea", "Blueberry Pancakes", 315)
+}
+
+word_yes = ("yes", "Yes", "yEs", "yeS", "YES", "yES", "YEs", "YeS")  ## for the sake of readibility, not recommended for optimization
+word_no = ("no", "No", "nO", "NO") # tupling
+
+while True: # used while with a "True: argument to keep on repeating the line 28
+    customer_name = input("For VIP access, please enter your name: ")
+
+    if customer_name in customer_list: # This loop continuously asks for a name input for VIP access. If the name is in the customer list, it prints a greeting and breaks the loop
+        print(customer_list[customer_name].greetings)
+        break # avoid infinity
+    else: # you can add another if after this else 
+        response1 = input(f"I'm sorry, {customer_name}. You're not on our list. Would you like to try again?")
+        if response1 in word_no:
+            print("Thank you so much for your time.")
+            break
+            
+# result: While Loop: This loop continuously asks for a name input for VIP access. If the name is in the customer list, it prints a greeting and breaks the loop. If the name is not in the list, it asks if the user wants to try again. If the response is in word_no, it thanks the user and breaks the loop.
