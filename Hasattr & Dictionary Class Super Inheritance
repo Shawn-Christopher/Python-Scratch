@@ -1,0 +1,66 @@
+class dog:  
+    greetings = "Welcome to Dog Kingdom"
+    
+    def __init__(self, species, name, sex, color, nickname): # parent class. Used "__init__" because it's pertaining to "attr"
+        self.species = species
+        self.name = name
+        self.sex = sex
+        self.color = color
+        self.nickname = nickname
+    
+    def chicken_call(self):  # "chicken call" is not pertaining to an "attr" but a "function call"
+        print(f"Name: {self.name}")
+        print(f"Species: {self.species}")
+        print(f"Sex: {self.sex}")
+        print(f"Color: {self.color}")
+        print(f"Nickname: {self.nickname}")
+        if hasattr(self, 'disease'):
+            print(f"Disease: {self.disease}")
+        else:
+            print(f"Disease: N/A")
+        if hasattr(self, 'eye_color'):
+            print(f"Eye Color: {self.eye_color}")
+        else:
+            print(f"Eye Color: N/A")
+        if hasattr(self, 'attitude'):
+            print(f"Attitude: {self.attitude}")
+        else:
+            print(f"Attitude: N/A")
+
+
+class french_bulldog(dog): # subclass
+    
+# you must copy the parent attr: *def __init__(self, species, name, sex, color, nickname* 
+# and then put the newly introduced attr of the subclass after it ", disease"
+    def __init__(self, species, name, sex, color, nickname, disease):  
+        super().__init__(species, name, sex, color, nickname)
+        self.disease = disease
+
+class labrador_retriever(dog):
+    
+    def __init__(self, species, name, sex, color, nickname, eye_color):
+        super().__init__(species, name, sex, color, nickname)
+        self.eye_color = eye_color # you add at the end the new attr introduced by a subclass
+        
+class golden_retriever(dog):
+    
+    def __init__(self, species, name, sex, color, nickname, attitude):
+        super().__init__(species, name, sex, color, nickname) ## in using super(). , must not use the "self"
+        self.attitude = attitude
+    
+# dictionary 
+dogs = {
+    "Fido": french_bulldog("Canis lupus familiaris", "Fido", "Male", "Brindle", "Frenchie", "Hip Dysplasia"),
+    "Buddy": labrador_retriever("Canis lupus familiaris", "Buddy", "Male", "Yellow", "Lab", "Brown"),
+    "Cloudy": golden_retriever("Canis lupus familiaris", "Bella", "Female", "Gold", "Goldie", "Friendly")
+}
+
+# returns all entry from the dictionary
+"""Getting all results: for dog_name, dog_instance in dogs.items():
+    print(dog.greetings)
+    dog_instance.chicken_call()
+    print("\n")"""
+
+# prints only one entry
+print(dog.greetings)
+dogs["Cloudy"].chicken_call()
