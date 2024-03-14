@@ -1,0 +1,38 @@
+groceries = {
+    "chicken": 8, 
+    "apples": 6,
+    "cucumbers": 3, 
+    "milk": 2, 
+    "oranges": 4}
+    
+print(f"Removed grocery: {groceries.pop('oranges')}")
+
+print(groceries)
+
+speakers = {
+    "Rafael": 54,
+    "Joan": 33,
+    "Dana": 67
+}
+
+print(f"Speaker name: {speakers.keys()}")
+
+swim_tryout = {
+    "carl": "passed",
+    "quentin": "failed",
+    "john": "passed",
+    "peter": "failed",
+    "max": "passed",
+    "joseph": "passed",
+    "jone": "passed",
+    "jorge": "failed",
+    "george": "passed",
+    "ben": "passed",
+    "jerome": "passed",
+    "rick": "failed",
+    "mike": "failed",
+    "jan": "failed",
+    "vince": "passed"
+}    
+print(swim_tryout["mike"]) # retrieved a value
+print(swim_tryout.get("jorge"))  # another way to retrieve a value
