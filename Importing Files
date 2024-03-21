@@ -1,0 +1,18 @@
+# Python knows that there's no 'newfile.txt' file, 
+# therefore creates and writes 'w' on it
+f = open("newfile.txt", "w") 
+f.write("Introduction to Python")
+f.close()  # Don't forget to close the file after writing
+
+f = open("newfile.txt", "r")
+print(f.read())
+f.close()
+
+filename = "imaginary.txt"
+with open(filename, "w") as file:
+    file.write("imaginary content")
+# No need to close the file when using 'with' statement
+
+with open(filename, "r") as file:
+    print(file.read())
+# No need to close the file when using 'with' statement
