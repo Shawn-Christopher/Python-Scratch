@@ -1,3 +1,8 @@
+# Types of modes: "r.a.w.x"
+# r - read
+# a - append
+# w - write
+# x - create
 # Python knows that there's no 'newfile.txt' file, 
 # therefore creates and writes 'w' on it
 f = open("newfile.txt", "w") 
