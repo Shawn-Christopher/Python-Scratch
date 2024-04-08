@@ -1,0 +1,39 @@
+import numpy as np
+import scipy as sp
+import statistics as stat
+
+p_sample = [103, 151, 176, 188, 146, 184, 175, 112, 115, 163]
+
+def dis_mean():
+    mean = stat.mean(p_sample)
+    print(f"Mean: {mean}")
+
+def dis_mode():
+    mode = stat.mode(p_sample)
+    print(f"Mode: {mode}")
+
+def dis_median():
+    median = np.median(p_sample)
+    print(f"Median: {median}")
+
+def dis_var():
+    variance = np.var(p_sample)
+    print(f"Variance: {round(variance,2)}")
+
+def dis_std():
+    std = np.std(p_sample)
+    print(f"Standard Deviation: {round(std,2)}")
+
+def dis_range():
+    range = np.ptp(p_sample)
+    print(f"Range: {range}")
+
+def main_call():
+    dis_mean()
+    dis_mode()
+    dis_median()
+    dis_var()
+    dis_std()
+    dis_range()
+
+main_call()
